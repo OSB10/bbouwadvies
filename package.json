@@ -5,27 +5,35 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "email:dev": "npx react-email dev",
+    "email:export": "npx react-email export"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
-    "@vercel/analytics": "1.6.1",
     "@radix-ui/react-dialog": "1.1.15",
+    "@react-email/components": "^1.0.11",
+    "@react-email/preview": "^0.0.14",
+    "@react-email/render": "^2.0.5",
+    "@vercel/analytics": "1.6.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.564.0",
     "next": "16.2.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-hook-form": "^7.54.1",
+    "resend": "^6.10.0",
     "tailwind-merge": "^3.3.1",
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@react-email/preview-server": "^5.2.10",
     "@tailwindcss/postcss": "^4.2.0",
     "@types/node": "^22",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "postcss": "^8.5",
+    "react-email": "^5.2.10",
     "tailwindcss": "^4.2.0",
     "tw-animate-css": "1.3.3",
     "typescript": "5.7.3"

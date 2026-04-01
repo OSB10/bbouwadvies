@@ -8,7 +8,15 @@ import {
   type ContactFormValues,
 } from "@/schema/schema";
 import { checkContactRateLimit } from "@/lib/rate-limit";
-import { sendBusinessContactEmail, sendContactAutoReply } from "@/lib/resend";
+import {
+  ContactConfirmationEmail,
+  subject as contactConfirmationSubject,
+} from "@/emails/contact-confirmation";
+import {
+  ContactFormEmail,
+  subject as contactFormSubject,
+} from "@/emails/contact-form";
+import { sendEmail } from "@/lib/email/send";
 import {
   createSubmissionFingerprint,
   isSuspiciousSubmission,
@@ -84,23 +92,32 @@ export async function submitContactAction(
       timeZone: "Europe/Amsterdam",
     }).format(new Date());
 
-    await sendBusinessContactEmail({
-      submittedAt,
-      fullName: values.fullName,
-      email: values.email,
-      phone: values.phone,
-      subject: values.subject,
-      message: values.message,
-      companyProject: values.companyProject,
+    const businessInbox = process.env.CONTACT_TO_EMAIL || "info@bbouwadvies.nl";
+
+    await sendEmail({
+      to: businessInbox,
+      subject: `${contactFormSubject}: ${values.subject}`,
+      replyTo: values.email,
+      react: ContactFormEmail({
+        submittedAt,
+        fullName: values.fullName,
+        email: values.email,
+        phone: values.phone,
+        subject: values.subject,
+        message: values.message,
+        companyProject: values.companyProject,
+      }),
     });
 
     try {
-      await sendContactAutoReply({
-        fullName: values.fullName,
-        email: values.email,
+      await sendEmail({
+        to: values.email,
+        subject: contactConfirmationSubject,
+        react: ContactConfirmationEmail({ fullName: values.fullName }),
       });
-    } catch {
+    } catch (error) {
       // confirmation email failure should not block the main submission
+      console.error("contact_confirmation_email_failed", error);
     }
 
     return {
@@ -110,9 +127,11 @@ export async function submitContactAction(
         "Bedankt voor uw bericht. Wij nemen zo spoedig mogelijk contact met u op.",
     };
   } catch (error) {
+    console.error("contact_submission_failed", error);
+
     const isMissingApiKey =
       error instanceof Error &&
-      error.message.includes("missing_resend_api_key");
+      error.message.includes("email_service_not_configured");
 
     return {
       success: false,
@@ -121,7 +140,7 @@ export async function submitContactAction(
         ? "De contactservice is momenteel nog niet volledig ingesteld."
         : "Er ging iets mis bij het verzenden van uw bericht. Probeer het later opnieuw of neem telefonisch contact op.",
       formError: isMissingApiKey
-        ? "RESEND_API_KEY ontbreekt op de server."
+        ? "RESEND_API_KEY ontbreekt op de server of is ongeldig geconfigureerd."
         : "Er ging iets mis bij het verzenden van uw bericht. Probeer het later opnieuw of neem telefonisch contact op.",
     };
   }
