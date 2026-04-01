@@ -60,10 +60,10 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-1">
                   <span className="type-form-label text-outline">Telefoon</span>
                   <Link
-                    href="tel:+31612345678"
+                    href="tel:+31634369753"
                     className="wrap-break-words text-xl transition-colors hover:text-primary"
                   >
-                    +31 (0) 6 123 456 78
+                    +31 (0) 6 34369753
                   </Link>
                 </div>
                 <div className="flex flex-col gap-1">

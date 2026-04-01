@@ -208,7 +208,7 @@ export default function HomePage() {
               Stuur een Email
             </Link>
             <Link
-              href="tel:+31612345678"
+              href="tel:+31634369753"
               className="monolith-button monolith-button-lg monolith-button-outline-light w-full sm:w-auto"
             >
               Bel ons direct

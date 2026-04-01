@@ -243,7 +243,7 @@ export default function DienstenPage() {
                 Plan een inspectie
               </Link>
               <Link
-                href="tel:+31612345678"
+                href="tel:+31634369753"
                 className="monolith-button monolith-button-lg monolith-button-outline-cta w-full text-xs font-bold tracking-widest active:scale-[0.98] sm:w-auto"
               >
                 Bel ons direct

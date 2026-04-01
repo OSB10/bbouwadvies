@@ -131,7 +131,7 @@ export function ContactForm() {
                     {...field}
                     type="tel"
                     autoComplete="tel"
-                    placeholder="+31 6 12 34 56 78"
+                    placeholder="+31 6 34369753"
                   />
                 </FormControl>
                 <FormMessage />

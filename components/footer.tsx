@@ -49,10 +49,10 @@ export function Footer() {
               info@bbouwadvies.nl
             </Link>
             <Link
-              href="tel:+31612345678"
+              href="tel:+31634369753"
               className="type-footer-link text-[#556162] transition-all hover:underline decoration-[#556162] underline-offset-4"
             >
-              +31 (0) 6 1234 5678
+              +31 (0) 6 34369753
             </Link>
             <p className="type-footer-link pt-4 text-[#556162]">Nederland</p>
           </div>
