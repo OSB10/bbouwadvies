@@ -75,7 +75,7 @@ export default function DienstenPage() {
 
           <div className="relative h-80 sm:h-96 md:col-span-4 md:h-auto">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDsJOEX2vJLSeIPtF7lgYm4Fo2RI9Lq3Jr-CvHe5hjLC8LBBD0TZIHpCg78ALmYN8JwGzxA1DBB5gVZb8foZlZbprGRA6G68trs1drbcVcxQJsuspx4JcJzGZHYBIUiiYHsaqcCDosFVmHPD0DDcO_2tGoyErYWspwJRXcQeQoF9gDV6Vy_CKe7YPhgKisGd9_YLBIhE6PDi2Ug4mtKZO28D5zyBN8HJCtWCjXdUbHqanPLJWLSS7YlVd4T0Muj7g5nYZv4nltu_55"
+              src="/architecture__concrete-facade-detail__geometric-shadows.png"
               alt="Architectural structure detail"
               fill
               priority

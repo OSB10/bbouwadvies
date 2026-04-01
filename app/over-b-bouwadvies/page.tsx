@@ -74,11 +74,11 @@ export default function OverPage() {
           <div className="relative min-w-0 lg:col-span-4">
             <div className="relative aspect-3/4 bg-surface-container">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMYIYqBDFNGpjxi3EoYPh8U0jNNkvDIlgu_ZF_TE6InccjOmXAIECBPUC1oknAssgYlobyNAt52bHa2DWJrPbAumLS55Ikb7SCnBGUn5YA1UhuwkO5pGPrdKBwlITGspLEzrpB9MZ6TOss2lMgCaEQ9_blhZCIxmBumF2CF40Adt-bnpy1crYCViFMFcfU2fbHqZ-hOoI_ZaGJubVUDirCFSjhLZ9RWz03SpXb5xVD8K9XDJwnxFrHaZnBrUCQqMrAslGjjLD1qoLw"
+                src="/modern-concrete-building.png"
                 alt="Architectural Intent"
                 fill
                 priority
-                className="object-cover opacity-80 mix-blend-multiply"
+                className="object-cover grayscale opacity-80 mix-blend-multiply"
               />
               <div className="absolute inset-0 bg-primary opacity-5 mix-blend-overlay" />
             </div>
@@ -126,7 +126,7 @@ export default function OverPage() {
             <div className="relative">
               <div className="absolute -left-12 -top-12 -z-10 hidden h-64 w-64 bg-surface-container-highest/30 md:block" />
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVAqD0W296frL4VPwh5XR-0A3-ETV-XEuYrtf0-CRsn5nEoayuZS_-JMqu4sPvZypZ30Wduz3tEfYKv4I9Pi4HK3gMmHE9fqmBpt-6UatJfP25URXlZ_QF8oZEhj35xFyaACvHn6rzOu1rzgzXdsgWlmjGtCWXSdWwfI8AIQ3ybUTJuoRm-OsDaOvgIuSsRKsiwEATw25aA7vPAwTmNp1ro2fZYOxiAQ6p2BS9eWYlnbpL_bVII4y9gI_aaeKpRVdBSTuTEmZd9xvP"
+                src="/construction-samples-blueprint.png"
                 alt="Professional Standards"
                 width={620}
                 height={460}

@@ -80,7 +80,7 @@ export default function HomePage() {
           <div className="relative mt-12 min-w-0 lg:col-span-5 lg:mt-0">
             <div className="relative aspect-4/5 overflow-hidden bg-surface-container shadow-2xl">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbCtb2wnwDYjh5hlsAIlv-BFxdqH2Mje6PCB5wWww-Sc2grmLHD46swMlPGBOVQ3cQaWWXD7CIk1Ac9y9v9GX06ZZbioRJRvOKLwg9OpgNa1-EG8XkvdB8c8-0CjWkwck1cxZ-ek6YWEneYRvRRbJCo9tDoXJkJSLhLVdHgQd5FKW0VmWumHwa-xDV9gJllMa7xkL6vklqI7lSxTBclIu5yFvKuM-E9_-8l-Z42r6c_tGItIQ3C0NquemEzUFvugKHTRI8Ly3oTMOB"
+                src="/concrete-glass-intersection__industrial-minimal.png"
                 alt="Modern architecture detail"
                 fill
                 priority
@@ -155,7 +155,7 @@ export default function HomePage() {
             <div className="order-2 relative lg:order-1">
               <div className="relative z-10 h-80 bg-surface-container sm:h-96 md:h-125">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuwpf24TazZ_KpfHNJcwcbggpg9K31L2GRRlxbOvVxw7m7SB_oCcjnlAne_v6lvbzsfFlDyN7-2FzO17MLlt0MAfkGxpYivTIlDDjZjXLPKj5BcqBerIYVfM8MQ-gckx48QGxh_aUglBTHDJtvtIm4OXcQvLxAv5eO0r9n9JAVFMUnrmo8czNdjoFnnQLaG6jjYkAfBE7a6oBcjyDGisT_lRaQw6tUjoc-l4f_pugatbLxQq08DvEbw7Yv1NRMLZDTn4y_tMt4_PUb"
+                  src="/technical-drawings-topdown.png"
                   alt="Technical blueprints and tools"
                   fill
                   className="object-cover grayscale opacity-90"

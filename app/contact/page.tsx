@@ -31,7 +31,7 @@ export default function ContactPage() {
 
           <div className="relative h-80 overflow-hidden bg-surface-container-high group sm:h-96 md:col-span-5 md:h-125">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Bf2Lw5YlHuWcu0XBlSpCthadJjcPaQ3uyd9QOLw8j1lUI64cbEgmVXoo8xP4SPiJYmBqbNZb7yCGNExAwgqtfskq7-9oMR3gjDSqRT1CzTr3ZdcCuXQhQAoZ4Sadi7GOvIq7fcVob3bVGAYppRkqnapf2iMQnj-1olM--sNme0J4YJ0Ke0G_2NuiapxsaA-57VbqCDS_QBsB9f48dflcA4kYeOHGZN-xo3i-2MkzY8Zu7yI-RAu9nuKD9BOEnmkb7fAPmuP6QaaL"
+              src="/modern-city-map-with-minimal-geometric-shapes.png"
               alt="Architectural details"
               fill
               priority
@@ -61,7 +61,7 @@ export default function ContactPage() {
                   <span className="type-form-label text-outline">Telefoon</span>
                   <Link
                     href="tel:+31612345678"
-                    className="break-words text-xl transition-colors hover:text-primary"
+                    className="wrap-break-words text-xl transition-colors hover:text-primary"
                   >
                     +31 (0) 6 123 456 78
                   </Link>
