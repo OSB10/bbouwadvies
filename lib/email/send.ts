@@ -63,7 +63,7 @@ export async function sendEmail({
 
   for (let attempt = 1; attempt <= DEFAULT_RETRY_COUNT; attempt += 1) {
     try {
-      await resend.emails.send({
+      const result = await resend.emails.send({
         from: from || config.fromEmail,
         to,
         subject,
@@ -71,6 +71,12 @@ export async function sendEmail({
         text,
         ...(replyTo ? { replyTo } : {}),
       });
+
+      if (result.error) {
+        throw new Error(
+          `resend_api_error:${result.error.name}:${result.error.message}`,
+        );
+      }
 
       return { status: "sent", attempts: attempt };
     } catch (error) {
