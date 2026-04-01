@@ -43,10 +43,10 @@ const principles = [
 export default function HomePage() {
   return (
     <div className="page-frame">
-      <section className="hero-section relative flex min-h-217.5 items-center overflow-hidden bg-surface">
+      <section className="hero-section relative flex min-h-[calc(100svh-5rem)] items-center overflow-hidden bg-surface lg:min-h-217.5">
         <div className="blueprint-grid pointer-events-none absolute inset-0" />
         <div className="site-container grid-gap relative z-10 grid w-full grid-cols-1 items-center lg:grid-cols-12">
-          <div className="content-stack lg:col-span-7 pt-12">
+          <div className="content-stack min-w-0 pt-12 lg:col-span-7">
             <div className="hero-accent" />
             <h1 className="type-display measure-lg text-on-surface">
               Onafhankelijk bouwkundig advies met focus op{" "}
@@ -60,13 +60,13 @@ export default function HomePage() {
             <div className="button-row items-start">
               <Link
                 href="/contact"
-                className="monolith-button monolith-button-primary"
+                className="monolith-button monolith-button-primary w-full sm:w-auto"
               >
                 Neem contact op
               </Link>
               <Link
                 href="/diensten"
-                className="group relative monolith-button monolith-button-ghost"
+                className="group relative monolith-button monolith-button-ghost w-full sm:w-auto"
               >
                 Diensten bekijken
                 <span className="absolute bottom-4 left-8 right-8 h-px origin-left scale-x-0 bg-primary transition-transform duration-300 ease-out group-hover:scale-x-100" />
@@ -77,7 +77,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative mt-12 lg:col-span-5 lg:mt-0">
+          <div className="relative mt-12 min-w-0 lg:col-span-5 lg:mt-0">
             <div className="relative aspect-4/5 overflow-hidden bg-surface-container shadow-2xl">
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbCtb2wnwDYjh5hlsAIlv-BFxdqH2Mje6PCB5wWww-Sc2grmLHD46swMlPGBOVQ3cQaWWXD7CIk1Ac9y9v9GX06ZZbioRJRvOKLwg9OpgNa1-EG8XkvdB8c8-0CjWkwck1cxZ-ek6YWEneYRvRRbJCo9tDoXJkJSLhLVdHgQd5FKW0VmWumHwa-xDV9gJllMa7xkL6vklqI7lSxTBclIu5yFvKuM-E9_-8l-Z42r6c_tGItIQ3C0NquemEzUFvugKHTRI8Ly3oTMOB"
@@ -153,7 +153,7 @@ export default function HomePage() {
         <div className="site-container">
           <div className="grid-gap-lg grid grid-cols-1 items-center lg:grid-cols-2">
             <div className="order-2 relative lg:order-1">
-              <div className="relative z-10 h-96 bg-surface-container md:h-125">
+              <div className="relative z-10 h-80 bg-surface-container sm:h-96 md:h-125">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuwpf24TazZ_KpfHNJcwcbggpg9K31L2GRRlxbOvVxw7m7SB_oCcjnlAne_v6lvbzsfFlDyN7-2FzO17MLlt0MAfkGxpYivTIlDDjZjXLPKj5BcqBerIYVfM8MQ-gckx48QGxh_aUglBTHDJtvtIm4OXcQvLxAv5eO0r9n9JAVFMUnrmo8czNdjoFnnQLaG6jjYkAfBE7a6oBcjyDGisT_lRaQw6tUjoc-l4f_pugatbLxQq08DvEbw7Yv1NRMLZDTn4y_tMt4_PUb"
                   alt="Technical blueprints and tools"
@@ -161,7 +161,7 @@ export default function HomePage() {
                   className="object-cover grayscale opacity-90"
                 />
               </div>
-              <div className="absolute -right-12 -top-12 -z-10 h-64 w-64 bg-surface-container-highest" />
+              <div className="hidden md:block absolute -right-12 -top-12 -z-10 h-64 w-64 bg-surface-container-highest" />
             </div>
 
             <div className="order-1 lg:order-2">
@@ -203,13 +203,13 @@ export default function HomePage() {
           <div className="button-row-lg justify-center sm:flex-wrap">
             <Link
               href="mailto:info@bbouwadvies.nl"
-              className="monolith-button monolith-button-lg monolith-button-light"
+              className="monolith-button monolith-button-lg monolith-button-light w-full sm:w-auto"
             >
               Stuur een Email
             </Link>
             <Link
               href="tel:+31612345678"
-              className="monolith-button monolith-button-lg monolith-button-outline-light"
+              className="monolith-button monolith-button-lg monolith-button-outline-light w-full sm:w-auto"
             >
               Bel ons direct
             </Link>

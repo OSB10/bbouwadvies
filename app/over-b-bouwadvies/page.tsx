@@ -54,7 +54,7 @@ export default function OverPage() {
     <div className="page-frame">
       <section className="relative overflow-hidden bg-surface pt-24 pb-32">
         <div className="site-container grid-gap grid grid-cols-1 items-start lg:grid-cols-12">
-          <div className="content-stack lg:col-span-8">
+          <div className="content-stack min-w-0 lg:col-span-8">
             <span className="mb-6 block text-xs uppercase tracking-widest text-secondary">
               De Fundering van Vertrouwen
             </span>
@@ -71,7 +71,7 @@ export default function OverPage() {
             </div>
           </div>
 
-          <div className="relative lg:col-span-4">
+          <div className="relative min-w-0 lg:col-span-4">
             <div className="relative aspect-3/4 bg-surface-container">
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMYIYqBDFNGpjxi3EoYPh8U0jNNkvDIlgu_ZF_TE6InccjOmXAIECBPUC1oknAssgYlobyNAt52bHa2DWJrPbAumLS55Ikb7SCnBGUn5YA1UhuwkO5pGPrdKBwlITGspLEzrpB9MZ6TOss2lMgCaEQ9_blhZCIxmBumF2CF40Adt-bnpy1crYCViFMFcfU2fbHqZ-hOoI_ZaGJubVUDirCFSjhLZ9RWz03SpXb5xVD8K9XDJwnxFrHaZnBrUCQqMrAslGjjLD1qoLw"
@@ -122,9 +122,9 @@ export default function OverPage() {
 
       <section className="section-space-lg bg-surface">
         <div className="site-container grid-gap-lg grid grid-cols-1 items-center lg:grid-cols-12">
-          <div className="order-2 lg:col-span-5 lg:order-1">
+          <div className="order-2 min-w-0 lg:col-span-5 lg:order-1">
             <div className="relative">
-              <div className="absolute -left-12 -top-12 -z-10 h-64 w-64 bg-surface-container-highest/30" />
+              <div className="absolute -left-12 -top-12 -z-10 hidden h-64 w-64 bg-surface-container-highest/30 md:block" />
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVAqD0W296frL4VPwh5XR-0A3-ETV-XEuYrtf0-CRsn5nEoayuZS_-JMqu4sPvZypZ30Wduz3tEfYKv4I9Pi4HK3gMmHE9fqmBpt-6UatJfP25URXlZ_QF8oZEhj35xFyaACvHn6rzOu1rzgzXdsgWlmjGtCWXSdWwfI8AIQ3ybUTJuoRm-OsDaOvgIuSsRKsiwEATw25aA7vPAwTmNp1ro2fZYOxiAQ6p2BS9eWYlnbpL_bVII4y9gI_aaeKpRVdBSTuTEmZd9xvP"
                 alt="Professional Standards"
@@ -135,7 +135,7 @@ export default function OverPage() {
             </div>
           </div>
 
-          <div className="order-1 lg:col-span-7 lg:order-2">
+          <div className="order-1 min-w-0 lg:col-span-7 lg:order-2">
             <h2 className="mb-8 text-4xl font-black tracking-tighter">
               Onafhankelijk en onderbouwd advies.
             </h2>
@@ -183,7 +183,7 @@ export default function OverPage() {
             {steps.map((step) => (
               <article
                 key={step.number}
-                className="card-pad flex h-80 flex-col justify-between bg-surface"
+                className="card-pad flex min-h-72 flex-col justify-between bg-surface md:h-80"
               >
                 <span className="text-5xl font-black text-outline-variant/30">
                   {step.number}
@@ -209,13 +209,13 @@ export default function OverPage() {
           <div className="flex flex-col gap-6 sm:flex-row sm:flex-wrap">
             <Link
               href="/contact"
-              className="monolith-button monolith-button-light px-10 py-4 text-sm tracking-tight sm:w-auto"
+              className="monolith-button monolith-button-light w-full px-10 py-4 text-sm tracking-tight sm:w-auto"
             >
               Plan een adviesgesprek
             </Link>
             <Link
               href="/diensten"
-              className="monolith-button monolith-button-outline-light px-10 py-4 text-sm tracking-tight sm:w-auto"
+              className="monolith-button monolith-button-outline-light w-full px-10 py-4 text-sm tracking-tight sm:w-auto"
             >
               Bekijk projecten
             </Link>

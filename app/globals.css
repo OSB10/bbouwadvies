@@ -244,6 +244,28 @@
   gap: var(--space-5);
 }
 
+@media (max-width: 767px) {
+  .hero-section {
+    padding-block: var(--space-9);
+  }
+
+  .section-space {
+    padding-block: var(--space-8);
+  }
+
+  .section-space-lg {
+    padding-block: var(--space-9);
+  }
+
+  .grid-gap {
+    gap: var(--space-6);
+  }
+
+  .grid-gap-lg {
+    gap: var(--space-8);
+  }
+}
+
 @media (min-width: 640px) {
   .button-row-lg {
     flex-direction: row;

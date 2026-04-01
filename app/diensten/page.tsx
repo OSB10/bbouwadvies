@@ -58,7 +58,7 @@ export default function DienstenPage() {
     <div className="page-frame">
       <section className="relative overflow-hidden bg-surface pt-32 pb-20">
         <div className="site-container grid-gap grid grid-cols-1 md:grid-cols-12">
-          <div className="content-stack justify-center md:col-span-8">
+          <div className="content-stack min-w-0 justify-center md:col-span-8">
             <span className="mb-6 block text-xs uppercase tracking-[0.2em] text-secondary">
               Expertise &amp; Onafhankelijkheid
             </span>
@@ -73,7 +73,7 @@ export default function DienstenPage() {
             </p>
           </div>
 
-          <div className="relative h-100 md:col-span-4 md:h-auto">
+          <div className="relative h-80 sm:h-96 md:col-span-4 md:h-auto">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDsJOEX2vJLSeIPtF7lgYm4Fo2RI9Lq3Jr-CvHe5hjLC8LBBD0TZIHpCg78ALmYN8JwGzxA1DBB5gVZb8foZlZbprGRA6G68trs1drbcVcxQJsuspx4JcJzGZHYBIUiiYHsaqcCDosFVmHPD0DDcO_2tGoyErYWspwJRXcQeQoF9gDV6Vy_CKe7YPhgKisGd9_YLBIhE6PDi2Ug4mtKZO28D5zyBN8HJCtWCjXdUbHqanPLJWLSS7YlVd4T0Muj7g5nYZv4nltu_55"
               alt="Architectural structure detail"
@@ -193,7 +193,7 @@ export default function DienstenPage() {
             </div>
           </div>
 
-          <div className="order-1 md:order-2">
+          <div className="order-1 min-w-0 md:order-2">
             <h2 className="mb-8 text-4xl font-black uppercase leading-none tracking-tighter text-on-background">
               Onafhankelijkheid als basis voor helder inzicht.
             </h2>
@@ -238,13 +238,13 @@ export default function DienstenPage() {
             <div className="button-row flex-col justify-center sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
-                className="monolith-button monolith-button-lg monolith-button-primary monolith-button-primary-cta text-xs font-bold tracking-widest active:scale-[0.98]"
+                className="monolith-button monolith-button-lg monolith-button-primary monolith-button-primary-cta w-full text-xs font-bold tracking-widest active:scale-[0.98] sm:w-auto"
               >
                 Plan een inspectie
               </Link>
               <Link
                 href="tel:+31612345678"
-                className="monolith-button monolith-button-lg monolith-button-outline-cta text-xs font-bold tracking-widest active:scale-[0.98]"
+                className="monolith-button monolith-button-lg monolith-button-outline-cta w-full text-xs font-bold tracking-widest active:scale-[0.98] sm:w-auto"
               >
                 Bel ons direct
               </Link>

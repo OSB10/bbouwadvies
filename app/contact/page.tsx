@@ -14,7 +14,7 @@ export default function ContactPage() {
     <div className="page-frame">
       <main className="site-container section-space-lg">
         <section className="mb-16 grid grid-cols-1 items-start gap-16 md:grid-cols-12">
-          <div className="content-stack md:col-span-7 md:pr-12">
+          <div className="content-stack min-w-0 md:col-span-7 md:pr-12">
             <span className="mb-6 block text-xs uppercase tracking-widest text-secondary">
               Klaar voor de volgende stap
             </span>
@@ -29,7 +29,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="relative h-96 overflow-hidden bg-surface-container-high group md:col-span-5 md:h-125">
+          <div className="relative h-80 overflow-hidden bg-surface-container-high group sm:h-96 md:col-span-5 md:h-125">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Bf2Lw5YlHuWcu0XBlSpCthadJjcPaQ3uyd9QOLw8j1lUI64cbEgmVXoo8xP4SPiJYmBqbNZb7yCGNExAwgqtfskq7-9oMR3gjDSqRT1CzTr3ZdcCuXQhQAoZ4Sadi7GOvIq7fcVob3bVGAYppRkqnapf2iMQnj-1olM--sNme0J4YJ0Ke0G_2NuiapxsaA-57VbqCDS_QBsB9f48dflcA4kYeOHGZN-xo3i-2MkzY8Zu7yI-RAu9nuKD9BOEnmkb7fAPmuP6QaaL"
               alt="Architectural details"
@@ -61,7 +61,7 @@ export default function ContactPage() {
                   <span className="type-form-label text-outline">Telefoon</span>
                   <Link
                     href="tel:+31612345678"
-                    className="wrap-break-words text-xl transition-colors hover:text-primary"
+                    className="break-words text-xl transition-colors hover:text-primary"
                   >
                     +31 (0) 6 123 456 78
                   </Link>
