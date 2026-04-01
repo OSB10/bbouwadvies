@@ -1,75 +1,73 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import type { Metadata } from 'next'
+import Link from "next/link";
+import Image from "next/image";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Over B Bouwadvies | Onafhankelijk Bouwkundig Advies',
+  title: "Over B Bouwadvies | Onafhankelijk Bouwkundig Advies",
   description:
-    'Lees meer over de achtergrond, onafhankelijke werkwijze en technische zorgvuldigheid van B Bouwadvies.',
-}
+    "Lees meer over de achtergrond, onafhankelijke werkwijze en technische zorgvuldigheid van B Bouwadvies.",
+};
 
 const values = [
   {
-    icon: 'verified_user',
-    title: 'Onafhankelijkheid',
-    body:
-      'Wij werken volledig onafhankelijk van aannemers en ontwikkelaars. Onze adviezen zijn gebaseerd op technische feiten en een objectieve analyse.',
+    icon: "verified_user",
+    title: "Onafhankelijkheid",
+    body: "Wij werken volledig onafhankelijk van aannemers en ontwikkelaars. Onze adviezen zijn gebaseerd op technische feiten en een objectieve analyse.",
   },
   {
-    icon: 'biotech',
-    title: 'Analytische Precisie',
-    body:
-      'Geen aannames, maar analyse. Wij brengen de technische werkelijkheid in kaart en maken inzichtelijk wat er daadwerkelijk speelt.',
+    icon: "biotech",
+    title: "Analytische Precisie",
+    body: "Geen aannames, maar analyse. Wij brengen de technische werkelijkheid in kaart en maken inzichtelijk wat er daadwerkelijk speelt.",
   },
   {
-    icon: 'balance',
-    title: 'Objectief Advies',
-    body:
-      'Wij leveren heldere, onderbouwde rapportages die de basis vormen voor verantwoorde beslissingen.',
+    icon: "balance",
+    title: "Objectief Advies",
+    body: "Wij leveren heldere, onderbouwde rapportages die de basis vormen voor verantwoorde beslissingen.",
   },
-]
+];
 
 const steps = [
   {
-    number: '01',
-    title: 'Vooronderzoek',
-    body: 'Analyse van beschikbare informatie, als basis voor de inspectie.',
+    number: "01",
+    title: "Vooronderzoek",
+    body: "Analyse van beschikbare informatie, als basis voor de inspectie.",
   },
   {
-    number: '02',
-    title: 'In-situ Inspectie',
-    body: 'Inspectie op locatie met gerichte observatie en metingen van de bouwkundige staat.',
+    number: "02",
+    title: "In-situ Inspectie",
+    body: "Inspectie op locatie met gerichte observatie en metingen van de bouwkundige staat.",
   },
   {
-    number: '03',
-    title: 'Analyse en toetsing',
-    body: 'Beoordeling van bevindingen op basis van normen, regelgeving en technische kennis.',
+    number: "03",
+    title: "Analyse en toetsing",
+    body: "Beoordeling van bevindingen op basis van normen, regelgeving en technische kennis.",
   },
   {
-    number: '04',
-    title: 'Rapportage',
+    number: "04",
+    title: "Rapportage",
     body: "Heldere rapportage met inzicht in bevindingen, risico's en concrete aandachtspunten.",
   },
-]
+];
 
 export default function OverPage() {
   return (
     <div className="page-frame">
-      <section className="hero-section relative overflow-hidden bg-surface">
+      <section className="relative overflow-hidden bg-surface pt-24 pb-32">
         <div className="site-container grid-gap grid grid-cols-1 items-start lg:grid-cols-12">
           <div className="content-stack lg:col-span-8">
             <span className="mb-6 block text-xs uppercase tracking-widest text-secondary">
               De Fundering van Vertrouwen
             </span>
-            <h1 className="type-page-title measure-lg text-on-surface">
+            <h1 className="measure-lg mb-8 text-[3.5rem] font-black leading-[1.1] tracking-tighter text-on-surface">
               Onafhankelijk bouwkundig advies, gebaseerd op analyse en inzicht.
             </h1>
-            <div className="h-0.5 w-10 bg-secondary" />
-            <div className="type-body-lg measure-md text-on-surface-variant">
-              B Bouwadvies is ontstaan vanuit een brede achtergrond in architectuur en
-              bouwtechniek. Wij analyseren bouwkundige vraagstukken en vertalen deze
-              naar helder inzicht en onderbouwde adviezen. Onafhankelijk, kritisch en
-              gericht op wat er werkelijk speelt.
+            <div className="hero-accent mb-12" />
+            <div className="measure-md text-xl leading-relaxed text-on-surface-variant">
+              B Bouwadvies is ontstaan vanuit een brede achtergrond in
+              architectuur en bouwtechniek. Wij analyseren bouwkundige
+              vraagstukken en vertalen deze naar helder inzicht en onderbouwde
+              adviezen. Onafhankelijk, kritisch en gericht op wat er werkelijk
+              speelt.
             </div>
           </div>
 
@@ -101,16 +99,19 @@ export default function OverPage() {
               <article
                 key={value.title}
                 className={`card-pad border-b border-r border-outline-variant/20 ${
-                  index !== 1 ? 'bg-white' : ''
+                  index !== 1 ? "bg-white" : ""
                 }`}
               >
-                <span className="material-symbols-outlined mb-6 text-3xl text-primary">
+                <span
+                  className="material-symbols-outlined mb-6 w-12 h-12 text-primary"
+                  style={{ fontSize: "2rem" }}
+                >
                   {value.icon}
                 </span>
-                <h2 className="type-card-title mb-4 uppercase">
+                <h2 className="mb-4 text-lg font-bold uppercase tracking-tight">
                   {value.title}
                 </h2>
-                <p className="type-body-sm text-on-surface-variant">
+                <p className="text-sm leading-relaxed text-on-surface-variant">
                   {value.body}
                 </p>
               </article>
@@ -135,37 +136,32 @@ export default function OverPage() {
           </div>
 
           <div className="order-1 lg:col-span-7 lg:order-2">
-            <h2 className="type-section-title mb-8">
+            <h2 className="mb-8 text-4xl font-black tracking-tighter">
               Onafhankelijk en onderbouwd advies.
             </h2>
-            <div className="mb-8 h-0.5 w-10 bg-secondary" />
-            <div className="type-body-lg space-y-6 text-on-surface-variant">
+            <div className="hero-accent mb-8" />
+            <div className="space-y-6 text-lg leading-relaxed text-on-surface-variant">
               <p>
-                Bij B Bouwadvies staat onafhankelijkheid centraal. Onze analyses zijn
-                niet beinvloed door uitvoerende of commerciele belangen.
+                Bij B Bouwadvies staat onafhankelijkheid centraal. Onze analyses
+                zijn niet beïnvloed door uitvoerende of commerciële belangen.
               </p>
               <p>
-                Wij werken gestructureerd en kijken verder dan de oppervlakte. Elke
-                beoordeling is gebaseerd op analyse en technische onderbouwing.
+                Wij werken gestructureerd en kijken verder dan de oppervlakte.
+                Elke beoordeling is gebaseerd op analyse en technische
+                onderbouwing.
               </p>
               <p>
-                Onze rapportages geven helder inzicht en vormen een betrouwbare basis
-                voor besluitvorming.
+                Onze rapportages geven helder inzicht en vormen een betrouwbare
+                basis voor besluitvorming.
               </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 gap-8">
-              <div>
-                <p className="text-xl font-bold text-primary">NEN 2767</p>
-                <p className="text-[10px] uppercase tracking-widest text-secondary">
-                  Conditiemeting Standaard
-                </p>
-              </div>
-              <div>
-                <p className="text-xl font-bold text-primary">100% Onafhankelijk</p>
-                <p className="text-[10px] uppercase tracking-widest text-secondary">
-                  Geen provisies of commissies
-                </p>
-              </div>
+            <div className="mt-12">
+              <p className="text-xl font-bold text-primary">
+                100% Onafhankelijk
+              </p>
+              <p className="text-[10px] uppercase tracking-widest text-secondary">
+                Geen provisies of commissies
+              </p>
             </div>
           </div>
         </div>
@@ -173,11 +169,11 @@ export default function OverPage() {
 
       <section className="section-space-lg bg-surface-container-highest">
         <div className="site-container">
-          <div className="mb-16 text-center">
-            <h2 className="type-section-title mb-4 uppercase">
+          <div className="mb-20 text-center">
+            <h2 className="mb-4 text-3xl font-black uppercase tracking-tighter">
               Technische Zorgvuldigheid
             </h2>
-            <p className="type-body mx-auto max-w-xl text-secondary">
+            <p className="mx-auto max-w-xl text-secondary">
               Kwaliteit is bij ons geen toeval, maar het resultaat van een
               gestructureerd proces.
             </p>
@@ -193,8 +189,8 @@ export default function OverPage() {
                   {step.number}
                 </span>
                 <div>
-                  <h3 className="type-card-title mb-2">{step.title}</h3>
-                  <p className="type-body-sm text-on-surface-variant">
+                  <h3 className="mb-2 font-bold">{step.title}</h3>
+                  <p className="text-sm leading-relaxed text-on-surface-variant">
                     {step.body}
                   </p>
                 </div>
@@ -204,56 +200,22 @@ export default function OverPage() {
         </div>
       </section>
 
-      <section className="section-space bg-surface">
-        <div className="site-container flex flex-col items-center">
-          <div className="max-w-2xl text-center">
-            <div className="mb-8 inline-block bg-primary-container px-4 py-1 text-[10px] uppercase tracking-widest text-on-primary-container">
-              Onze Expertise
-            </div>
-            <p className="type-body-lg mb-8 italic text-on-surface">
-              "Bouwadvies gaat verder dan alleen het zien van wat er staat; het is
-              het begrijpen van hoe het leeft en wat het nodig heeft om te blijven
-              staan."
-            </p>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-12 w-12 overflow-hidden bg-surface-container-high">
-                <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSbBtfhnW73f6Hk9v8UlFH62v2B-_1N8A45Uwe12kw53ViW9-7tdtm6lN-bG6a-yhB66L6abdsMh-RagSOAwHOK4BylYOTR5TK_2lXviPJQi4TZn0xRDKZAoKoSQBItTHjKrkzp5PrYznSVW-sESoo9RE_U5VoVR4I9hFtdHCTJMgxUha32Mss5V7U_XP28SZyFeePbY_sFKLt-F_RzcdNSAtcdS3DBHJQSnFynWDvPaGUJcqlZXtoRR9CacpflrLOkgMvCm6T6bQG"
-                  alt="Founder B Bouwadvies"
-                  width={48}
-                  height={48}
-                  className="h-full w-full object-cover grayscale"
-                />
-              </div>
-              <div className="text-left">
-                <p className="text-sm font-bold uppercase tracking-tight">
-                  Ing. B. de Vries
-                </p>
-                <p className="text-[10px] uppercase tracking-widest text-secondary">
-                  Oprichter &amp; Hoofdinspecteur
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section-space bg-primary text-on-primary">
         <div className="site-container flex flex-col items-center justify-between gap-8 md:flex-row md:gap-12">
-          <h2 className="type-section-title measure-md text-on-primary">
+          <h2 className="measure-md text-[2.5rem] font-black leading-none tracking-tighter text-on-primary">
             Klaar voor een <br />
             heldere analyse?
           </h2>
-          <div className="button-row">
+          <div className="flex flex-col gap-6 sm:flex-row">
             <Link
               href="/contact"
-              className="monolith-button monolith-button-light"
+              className="monolith-button monolith-button-light px-10 py-4 text-sm tracking-tight"
             >
               Plan een adviesgesprek
             </Link>
             <Link
               href="/diensten"
-              className="monolith-button monolith-button-outline-light"
+              className="monolith-button monolith-button-outline-light px-10 py-4 text-sm tracking-tight"
             >
               Bekijk projecten
             </Link>
@@ -261,5 +223,5 @@ export default function OverPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -239,7 +239,7 @@ export function ContactForm() {
             type="submit"
             disabled={isPending}
             aria-disabled={isPending}
-            className="min-w-44"
+            className="monolith-button monolith-button-primary min-w-44"
           >
             {isPending ? "Bericht verzenden..." : "Versturen"}
             {!isPending ? (

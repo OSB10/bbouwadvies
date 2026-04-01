@@ -17,7 +17,7 @@ const services = [
   {
     icon: "edit_note",
     title: "Technisch Advies",
-    body: "Strategisch advies bij complexe bouwvraagstukken, renovaties en verduurzamingstrajecten.",
+    body: "Strategisch advies bij complexe bouwvraagstukken, renovaties en verduurzamings-trajecten.",
     href: "/diensten",
   },
 ];
@@ -46,8 +46,8 @@ export default function HomePage() {
       <section className="hero-section relative flex min-h-217.5 items-center overflow-hidden bg-surface">
         <div className="blueprint-grid pointer-events-none absolute inset-0" />
         <div className="site-container grid-gap relative z-10 grid w-full grid-cols-1 items-center lg:grid-cols-12">
-          <div className="content-stack lg:col-span-7">
-            <div className="h-0.5 w-10 bg-secondary" />
+          <div className="content-stack lg:col-span-7 pt-12">
+            <div className="hero-accent" />
             <h1 className="type-display measure-lg text-on-surface">
               Onafhankelijk bouwkundig advies met focus op{" "}
               <span className="text-primary">inzicht</span> en kwaliteit.
@@ -69,7 +69,7 @@ export default function HomePage() {
                 className="group relative monolith-button monolith-button-ghost"
               >
                 Diensten bekijken
-                <span className="absolute bottom-4 left-6 right-6 h-px origin-left scale-x-0 bg-primary transition-transform group-hover:scale-x-100" />
+                <span className="absolute bottom-4 left-8 right-8 h-px origin-left scale-x-0 bg-primary transition-transform duration-300 ease-out group-hover:scale-x-100" />
                 <span className="material-symbols-outlined text-sm">
                   arrow_forward
                 </span>
@@ -102,38 +102,41 @@ export default function HomePage() {
 
       <section className="section-space-lg bg-surface-container-low">
         <div className="site-container">
-          <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div className="mb-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="measure-md">
               <span className="mb-4 block text-xs font-bold uppercase tracking-[0.3em] text-secondary">
                 Expertise gebieden
               </span>
               <h2 className="type-section-title text-on-surface">
-                Gespecialiseerd in technische precisie en strategische borging.
+                Gespecialiseerd in analyse, inzicht en technische onderbouwing.
               </h2>
             </div>
-            <div className="mb-4 hidden h-0.5 w-16 bg-outline-variant md:block" />
+            <div className="mb-4 hidden h-0.5 w-16 bg-on-surface md:block" />
           </div>
 
           <div className="grid grid-cols-1 gap-px bg-outline-variant/20 md:grid-cols-3">
             {services.map((service) => (
               <article
                 key={service.title}
-                className="card-pad group bg-white transition-all duration-500 hover:bg-primary"
+                className="card-pad group bg-white transition-all duration-500 hover:bg-primary flex flex-col"
               >
                 <div className="mb-10 text-primary transition-colors group-hover:text-on-primary">
-                  <span className="material-symbols-outlined text-5xl">
+                  <span
+                    className="material-symbols-outlined w-12 h-12"
+                    style={{ fontSize: "2.5rem" }}
+                  >
                     {service.icon}
                   </span>
                 </div>
                 <h3 className="type-card-title mb-4 transition-colors group-hover:text-on-primary">
                   {service.title}
                 </h3>
-                <p className="type-body mb-8 text-on-surface-variant transition-colors group-hover:text-on-primary/80">
+                <p className="type-body mb-8 text-on-surface-variant transition-colors group-hover:text-on-primary/80 leading-relaxed">
                   {service.body}
                 </p>
                 <Link
                   href={service.href}
-                  className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary group-hover:text-on-primary"
+                  className="mt-auto flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary group-hover:text-on-primary"
                 >
                   Lees meer
                   <span className="material-symbols-outlined text-xs">
@@ -162,7 +165,7 @@ export default function HomePage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <div className="mb-10 h-1 w-12 bg-primary" />
+              <div className="section-accent mb-10" />
               <h2 className="type-section-title mb-8 text-on-surface">
                 Onafhankelijkheid is ons fundament.
               </h2>
@@ -190,23 +193,23 @@ export default function HomePage() {
 
       <section className="section-space bg-primary text-on-primary">
         <div className="site-container text-center">
-          <h2 className="type-section-title mx-auto mb-8 max-w-4xl text-on-primary">
-            Klaar voor een heldere blik op uw bouwkundige vraagstukken?
+          <h2 className="type-cta-title mx-auto mb-8 max-w-4xl">
+            Klaar voor helder inzicht in uw bouwkundige vraagstuk?
           </h2>
-          <p className="type-body-lg mx-auto mb-12 max-w-2xl opacity-80">
-            Neem direct contact op voor een vrijblijvende kennismaking of een
-            offerte op maat voor uw project.
+          <p className="type-cta-description mx-auto mb-12 max-w-2xl">
+            Neem contact op en ontvang een eerste inhoudelijke beoordeling van
+            uw vraagstuk.
           </p>
-          <div className="button-row justify-center">
+          <div className="button-row-lg justify-center">
             <Link
               href="mailto:info@bbouwadvies.nl"
-              className="monolith-button monolith-button-light"
+              className="monolith-button monolith-button-lg monolith-button-light"
             >
               Stuur een Email
             </Link>
             <Link
               href="tel:+31612345678"
-              className="monolith-button monolith-button-outline-light"
+              className="monolith-button monolith-button-lg monolith-button-outline-light"
             >
               Bel ons direct
             </Link>

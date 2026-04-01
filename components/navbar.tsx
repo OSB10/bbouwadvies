@@ -58,7 +58,7 @@ export function Navbar() {
 
         <Link
           href="/contact"
-          className="monolith-button monolith-button-primary hidden md:inline-flex"
+          className="monolith-button monolith-button-primary px-6! hidden md:inline-flex"
         >
           Neem contact op
         </Link>

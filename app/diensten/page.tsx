@@ -12,7 +12,7 @@ const serviceCards = [
   {
     icon: "architecture",
     title: "1. Bouwkundige inspecties",
-    body: "Een grondige inspectie van de bouwkundige staat van uw pand. Wij identificeren gebreken, analyseren risico's en vertalen dit naar een helder en onderbouwd rapport.",
+    body: "Een grondige inspectie van de bouwkundige staat van uw pand. Wij identificeren gebreken, analyseren risico’s en vertalen dit naar een helder en onderbouwd rapport.",
     tone: "white",
     className: "md:col-span-7",
     bullets: [
@@ -24,7 +24,7 @@ const serviceCards = [
   {
     icon: "analytics",
     title: "2. Technische beoordelingen",
-    body: "Analyse van specifieke bouwkundige of constructieve vraagstukken, zoals vochtproblemen, scheurvorming of funderingen. Wij leveren een onafhankelijk en onderbouwd oordeel, zonder commerciele belangen.",
+    body: "Analyse van specifieke bouwkundige of constructieve vraagstukken, zoals vochtproblemen, scheurvorming of funderingen. Wij leveren een onafhankelijk en onderbouwd oordeel, zonder commerciële belangen.",
     tone: "soft",
     className: "md:col-span-5",
     footer: "Zekerheid door data\n& Analyse op locatie",
@@ -32,7 +32,7 @@ const serviceCards = [
   {
     icon: "foundation",
     title: "3. Aankoopkeuringen",
-    body: "Voorkom verrassingen bij aankoop. Wij beoordelen de bouwkundige staat en geven inzicht in risico's en te verwachten herstel op korte en lange termijn.",
+    body: "Voorkom verrassingen bij aankoop. Wij beoordelen de bouwkundige staat en geven inzicht in risico’s en te verwachten herstel op korte en lange termijn.",
     tone: "soft",
     className: "md:col-span-4",
   },
@@ -56,17 +56,17 @@ const serviceCards = [
 export default function DienstenPage() {
   return (
     <div className="page-frame">
-      <section className="hero-section relative overflow-hidden bg-surface">
+      <section className="relative overflow-hidden bg-surface pt-32 pb-20">
         <div className="site-container grid-gap grid grid-cols-1 md:grid-cols-12">
           <div className="content-stack justify-center md:col-span-8">
             <span className="mb-6 block text-xs uppercase tracking-[0.2em] text-secondary">
               Expertise &amp; Onafhankelijkheid
             </span>
-            <h1 className="type-page-title measure-lg text-on-background">
+            <h1 className="measure-lg text-5xl font-black leading-[1.05] tracking-tighter text-on-background md:text-7xl mb-8">
               Technisch inzicht als basis voor uw bouwkundige vraagstuk.
             </h1>
-            <div className="h-0.5 w-10 bg-secondary" />
-            <p className="type-body-lg measure-md text-on-surface-variant">
+            <div className="hero-accent" />
+            <p className="measure-md text-xl leading-relaxed text-on-surface-variant">
               Wij bieden onafhankelijk bouwkundig advies op basis van analyse en
               onderbouwing. Geen aannames, maar inzicht in wat er werkelijk
               speelt.
@@ -85,7 +85,7 @@ export default function DienstenPage() {
         </div>
       </section>
 
-      <section className="section-space bg-surface-container-low">
+      <section className="section-space-lg bg-surface-container-low">
         <div className="site-container">
           <div className="mb-16">
             <h2 className="type-section-title mb-4 uppercase text-on-background">
@@ -103,34 +103,35 @@ export default function DienstenPage() {
                   ? "bg-primary text-on-primary"
                   : card.tone === "soft"
                     ? "bg-surface-container"
-                    : "bg-white";
+                    : "bg-surface-container-lowest";
 
               return (
                 <article
                   key={card.title}
-                  className={`${card.className} ${surfaceClass} card-pad flex min-h-65 flex-col justify-between`}
+                  className={`${card.className} ${surfaceClass} card-pad flex flex-col justify-between group`}
                 >
                   <div className="relative z-10">
                     <span
-                      className={`material-symbols-outlined mb-8 text-4xl ${
+                      className={`material-symbols-outlined mb-8 w-12 h-12 ${
                         card.tone === "dark"
                           ? "text-on-primary"
                           : "text-primary"
                       }`}
+                      style={{ fontSize: "2.5rem" }}
                     >
                       {card.icon}
                     </span>
-                    <h3 className="type-subtitle mb-4 uppercase">
+                    <h3 className="mb-4 text-2xl font-black uppercase tracking-tight">
                       {card.title}
                     </h3>
                     <p
-                      className={`type-body ${
+                      className={
                         card.tone === "dark"
-                          ? "opacity-80"
+                          ? "text-sm opacity-80 leading-relaxed"
                           : card.className === "md:col-span-7"
-                            ? "mb-6 max-w-lg text-on-surface-variant"
-                            : "text-on-surface-variant"
-                      }`}
+                            ? "leading-relaxed mb-6 max-w-lg text-on-surface-variant"
+                            : "text-sm text-on-surface-variant leading-relaxed"
+                      }
                     >
                       {card.body}
                     </p>
@@ -179,8 +180,8 @@ export default function DienstenPage() {
         </div>
       </section>
 
-      <section className="section-space bg-surface">
-        <div className="site-container grid-gap-lg grid grid-cols-1 items-center md:grid-cols-2">
+      <section className="section-space-lg bg-surface">
+        <div className="site-container grid grid-cols-1 items-center gap-16 md:grid-cols-2">
           <div className="order-2 md:order-1">
             <div className="relative aspect-video overflow-hidden">
               <Image
@@ -193,13 +194,13 @@ export default function DienstenPage() {
           </div>
 
           <div className="order-1 md:order-2">
-            <h2 className="type-section-title mb-8 uppercase text-on-background">
+            <h2 className="mb-8 text-4xl font-black uppercase leading-none tracking-tighter text-on-background">
               Onafhankelijkheid als basis voor helder inzicht.
             </h2>
-            <p className="type-body-lg mb-8 text-on-surface-variant">
+            <p className="text-lg leading-relaxed mb-8 text-on-surface-variant">
               Bij B Bouwadvies staan we naast de opdrachtgever. Onze analyses
-              zijn onafhankelijk en niet beinvloed door uitvoerende of
-              commerciele belangen. Wij leveren heldere, technisch onderbouwde
+              zijn onafhankelijk en niet beïnvloed door uitvoerende of
+              commerciële belangen. Wij leveren heldere, technisch onderbouwde
               inzichten die nodig zijn voor gefundeerde keuzes.
             </p>
             <div className="grid grid-cols-2 gap-8 border-t border-outline-variant/20 pt-8">
@@ -225,27 +226,29 @@ export default function DienstenPage() {
       </section>
 
       <section className="section-space bg-surface-container-highest text-center">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="type-section-title mb-6 uppercase text-on-background">
-            Klaar voor een heldere analyse?
-          </h2>
-          <p className="type-body-lg mb-12 text-on-surface-variant">
-            Neem contact met ons op voor een vrijblijvend gesprek over uw
-            bouwkundige uitdagingen.
-          </p>
-          <div className="button-row justify-center">
-            <Link
-              href="/contact"
-              className="monolith-button monolith-button-primary"
-            >
-              Plan een inspectie
-            </Link>
-            <Link
-              href="tel:+31612345678"
-              className="monolith-button monolith-button-outline"
-            >
-              Bel ons direct
-            </Link>
+        <div className="site-container text-center">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="mb-6 text-4xl font-black uppercase tracking-tighter text-on-background">
+              Klaar voor een heldere analyse?
+            </h2>
+            <p className="mb-12 text-lg text-on-surface-variant">
+              Neem contact met ons op voor een vrijblijvend gesprek over uw
+              bouwkundige uitdagingen.
+            </p>
+            <div className="button-row justify-center flex-col sm:flex-row">
+              <Link
+                href="/contact"
+                className="monolith-button monolith-button-lg monolith-button-primary monolith-button-primary-cta text-xs font-bold tracking-widest active:scale-[0.98]"
+              >
+                Plan een inspectie
+              </Link>
+              <Link
+                href="tel:+31612345678"
+                className="monolith-button monolith-button-lg monolith-button-outline-cta text-xs font-bold tracking-widest active:scale-[0.98]"
+              >
+                Bel ons direct
+              </Link>
+            </div>
           </div>
         </div>
       </section>

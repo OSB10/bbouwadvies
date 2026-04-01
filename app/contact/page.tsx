@@ -12,31 +12,32 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="page-frame">
-      <main className="site-container section-space-lg min-h-screen">
+      <main className="site-container section-space-lg">
         <section className="mb-16 grid grid-cols-1 items-start gap-16 md:grid-cols-12">
           <div className="content-stack md:col-span-7 md:pr-12">
             <span className="mb-6 block text-xs uppercase tracking-widest text-secondary">
               Klaar voor de volgende stap
             </span>
             <h1 className="type-display measure-lg text-on-surface">
-              Laten we bouwen aan uw toekomst.
+              Van complexiteit naar heldere keuzes.
             </h1>
-            <div className="h-0.5 w-10 bg-secondary" />
+            <div className="hero-accent mb-8" />
             <p className="type-body-lg measure-md text-on-surface-variant">
-              Heeft u vragen over een bouwkundig rapport, aankoopkeuring of
-              technisch advies? Wij staan klaar om u te ondersteunen met
-              onafhankelijke expertise en heldere communicatie.
+              Heeft u een vraagstuk of twijfelt u over een ontwerp of plan? Wij
+              geven u een eerste inhoudelijke reactie en inzicht in de
+              belangrijkste aandachtspunten.
             </p>
           </div>
 
-          <div className="relative h-125 overflow-hidden bg-surface-container-high md:col-span-5">
+          <div className="relative h-125 overflow-hidden bg-surface-container-high md:col-span-5 group">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Bf2Lw5YlHuWcu0XBlSpCthadJjcPaQ3uyd9QOLw8j1lUI64cbEgmVXoo8xP4SPiJYmBqbNZb7yCGNExAwgqtfskq7-9oMR3gjDSqRT1CzTr3ZdcCuXQhQAoZ4Sadi7GOvIq7fcVob3bVGAYppRkqnapf2iMQnj-1olM--sNme0J4YJ0Ke0G_2NuiapxsaA-57VbqCDS_QBsB9f48dflcA4kYeOHGZN-xo3i-2MkzY8Zu7yI-RAu9nuKD9BOEnmkb7fAPmuP6QaaL"
               alt="Architectural details"
               fill
               priority
-              className="object-cover grayscale opacity-80 transition-transform duration-700"
+              className="object-cover grayscale opacity-80 group-hover:scale-105 transition-transform duration-700"
             />
+            <div className="absolute inset-0 border-20 border-surface pointer-events-none" />
           </div>
         </section>
 

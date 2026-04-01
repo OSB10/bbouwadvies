@@ -21,6 +21,7 @@
   --primary: #595f66;
   --primary-dim: #4d5359;
   --primary-container: #dde3eb;
+  --primary-fixed: #dde3eb;
   --on-primary: #f4f8ff;
   --on-primary-container: #4c5259;
 
@@ -92,6 +93,7 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-dim: var(--primary-dim);
+  --color-primary-fixed: var(--primary-fixed);
   --color-primary-container: var(--primary-container);
   --color-primary-foreground: var(--primary-foreground);
   --color-on-primary: var(--on-primary);
@@ -191,15 +193,15 @@
 }
 
 .hero-section {
-  padding-block: var(--space-9);
+  padding-block: 128px;
 }
 
 .section-space {
-  padding-block: var(--space-9);
+  padding-block: 96px;
 }
 
 .section-space-lg {
-  padding-block: var(--space-10);
+  padding-block: 128px;
 }
 
 .section-space-sm {
@@ -209,7 +211,7 @@
 .section-stack {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-6);
 }
 
 .section-stack-sm {
@@ -236,12 +238,25 @@
   gap: var(--space-4);
 }
 
+.button-row-lg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .button-row-lg {
+    flex-direction: row;
+    gap: var(--space-5);
+  }
+}
+
 .grid-gap {
-  gap: var(--space-6);
+  gap: 48px;
 }
 
 .grid-gap-lg {
-  gap: var(--space-9);
+  gap: 96px;
 }
 
 .measure-md {
@@ -266,7 +281,7 @@
 
 @media (min-width: 768px) {
   .hero-section {
-    padding-block: var(--space-10);
+    padding-block: 128px;
   }
 
   .inset-panel {
@@ -287,11 +302,11 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-3);
-  padding: var(--space-4) var(--space-6);
+  padding: 1rem 2rem;
   border: 1px solid transparent;
   font-family: var(--font-inter), "Inter", system-ui, sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.875rem;
+  font-weight: 800;
   letter-spacing: 0.1em;
   line-height: 1;
   text-transform: uppercase;
@@ -300,6 +315,11 @@
     color 0.2s ease,
     border-color 0.2s ease,
     opacity 0.2s ease;
+}
+
+.monolith-button-lg {
+  padding: 1.25rem 2.5rem;
+  font-weight: 900;
 }
 
 .monolith-button-primary {
@@ -311,14 +331,18 @@
   background: var(--primary-dim);
 }
 
+.monolith-button-primary-cta:hover {
+  background: var(--primary);
+  opacity: 0.9;
+}
+
 .monolith-button-ghost {
   color: var(--primary);
   background: transparent;
 }
 
 .monolith-button-ghost:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.35rem;
+  text-decoration: none;
 }
 
 .monolith-button-light {
@@ -339,6 +363,17 @@
   background: var(--surface-container);
 }
 
+.monolith-button-outline-cta {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.monolith-button-outline-cta:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
+}
+
 .monolith-button-outline-light {
   border-color: rgb(244 248 255 / 0.35);
   color: var(--on-primary);
@@ -352,8 +387,8 @@
   font-family: var(--font-inter), "Inter", system-ui, sans-serif;
   font-size: clamp(2.9rem, 4.6vw, 4.75rem);
   font-weight: 900;
-  line-height: 0.94;
-  letter-spacing: -0.045em;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
 }
 
 .type-page-title {
@@ -367,7 +402,7 @@
 .type-section-title {
   font-family: var(--font-inter), "Inter", system-ui, sans-serif;
   font-size: clamp(1.9rem, 2.6vw, 3rem);
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.04;
   letter-spacing: -0.03em;
 }
@@ -389,9 +424,25 @@
 }
 
 .type-body-lg {
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
   line-height: 1.75;
   font-weight: 400;
+}
+
+.type-cta-title {
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  font-size: clamp(1.875rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.type-cta-description {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  font-weight: 400;
+  color: var(--primary-fixed);
+  opacity: 0.8;
 }
 
 .type-body {
@@ -456,4 +507,40 @@
 /* Atmospheric Shadow for navigation */
 .atmospheric-shadow {
   box-shadow: 0 40px 40px -15px rgba(45, 52, 50, 0.04);
+}
+
+.hero-accent {
+  position: relative;
+  width: 40px;
+  height: 3px;
+  background: var(--on-surface);
+}
+
+.hero-accent::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 20px;
+  height: 1px;
+  background: var(--on-surface);
+  opacity: 0.35;
+}
+
+.section-accent {
+  position: relative;
+  width: 48px;
+  height: 4px;
+  background: var(--on-surface);
+}
+
+.section-accent::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 16px;
+  height: 1px;
+  background: var(--on-surface);
+  opacity: 0.35;
 }
