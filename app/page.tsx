@@ -57,7 +57,7 @@ export default function HomePage() {
               helder, zorgvuldig en onderbouwd. Wij vertalen complexe
               constructies naar concrete zekerheid.
             </p>
-            <div className="button-row">
+            <div className="button-row items-start">
               <Link
                 href="/contact"
                 className="monolith-button monolith-button-primary"
@@ -153,7 +153,7 @@ export default function HomePage() {
         <div className="site-container">
           <div className="grid-gap-lg grid grid-cols-1 items-center lg:grid-cols-2">
             <div className="order-2 relative lg:order-1">
-              <div className="relative z-10 h-125 bg-surface-container">
+              <div className="relative z-10 h-96 bg-surface-container md:h-125">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuwpf24TazZ_KpfHNJcwcbggpg9K31L2GRRlxbOvVxw7m7SB_oCcjnlAne_v6lvbzsfFlDyN7-2FzO17MLlt0MAfkGxpYivTIlDDjZjXLPKj5BcqBerIYVfM8MQ-gckx48QGxh_aUglBTHDJtvtIm4OXcQvLxAv5eO0r9n9JAVFMUnrmo8czNdjoFnnQLaG6jjYkAfBE7a6oBcjyDGisT_lRaQw6tUjoc-l4f_pugatbLxQq08DvEbw7Yv1NRMLZDTn4y_tMt4_PUb"
                   alt="Technical blueprints and tools"
@@ -171,7 +171,7 @@ export default function HomePage() {
               </h2>
               <div className="section-stack">
                 {principles.map((item) => (
-                  <div key={item.title} className="flex gap-6">
+                  <div key={item.title} className="flex items-start gap-6">
                     <span className="material-symbols-outlined text-2xl text-primary">
                       {item.icon}
                     </span>
@@ -200,7 +200,7 @@ export default function HomePage() {
             Neem contact op en ontvang een eerste inhoudelijke beoordeling van
             uw vraagstuk.
           </p>
-          <div className="button-row-lg justify-center">
+          <div className="button-row-lg justify-center sm:flex-wrap">
             <Link
               href="mailto:info@bbouwadvies.nl"
               className="monolith-button monolith-button-lg monolith-button-light"

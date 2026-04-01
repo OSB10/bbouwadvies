@@ -63,7 +63,7 @@ export function Footer() {
         <p className="type-body-sm text-[#556162]">
           &copy; 2024 B Bouwadvies. Onafhankelijk bouwkundig advies.
         </p>
-        <div className="flex gap-8">
+        <div className="flex flex-wrap justify-center gap-8 md:justify-end">
           <Link
             href="/privacy"
             className="type-body-sm text-[#556162] hover:text-[#595f66]"

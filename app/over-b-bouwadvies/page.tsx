@@ -58,7 +58,7 @@ export default function OverPage() {
             <span className="mb-6 block text-xs uppercase tracking-widest text-secondary">
               De Fundering van Vertrouwen
             </span>
-            <h1 className="measure-lg mb-8 text-[3.5rem] font-black leading-[1.1] tracking-tighter text-on-surface">
+            <h1 className="type-display measure-lg mb-8 text-on-surface">
               Onafhankelijk bouwkundig advies, gebaseerd op analyse en inzicht.
             </h1>
             <div className="hero-accent mb-12" />
@@ -206,16 +206,16 @@ export default function OverPage() {
             Klaar voor een <br />
             heldere analyse?
           </h2>
-          <div className="flex flex-col gap-6 sm:flex-row">
+          <div className="flex flex-col gap-6 sm:flex-row sm:flex-wrap">
             <Link
               href="/contact"
-              className="monolith-button monolith-button-light px-10 py-4 text-sm tracking-tight"
+              className="monolith-button monolith-button-light px-10 py-4 text-sm tracking-tight sm:w-auto"
             >
               Plan een adviesgesprek
             </Link>
             <Link
               href="/diensten"
-              className="monolith-button monolith-button-outline-light px-10 py-4 text-sm tracking-tight"
+              className="monolith-button monolith-button-outline-light px-10 py-4 text-sm tracking-tight sm:w-auto"
             >
               Bekijk projecten
             </Link>

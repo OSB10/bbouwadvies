@@ -203,7 +203,7 @@ export default function DienstenPage() {
               commerciële belangen. Wij leveren heldere, technisch onderbouwde
               inzichten die nodig zijn voor gefundeerde keuzes.
             </p>
-            <div className="grid grid-cols-2 gap-8 border-t border-outline-variant/20 pt-8">
+            <div className="grid grid-cols-1 gap-8 border-t border-outline-variant/20 pt-8 sm:grid-cols-2">
               <div>
                 <div className="mb-2 text-3xl font-black text-primary">
                   100%
@@ -235,7 +235,7 @@ export default function DienstenPage() {
               Neem contact met ons op voor een vrijblijvend gesprek over uw
               bouwkundige uitdagingen.
             </p>
-            <div className="button-row justify-center flex-col sm:flex-row">
+            <div className="button-row flex-col justify-center sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
                 className="monolith-button monolith-button-lg monolith-button-primary monolith-button-primary-cta text-xs font-bold tracking-widest active:scale-[0.98]"
